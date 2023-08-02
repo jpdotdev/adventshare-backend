@@ -59,6 +59,8 @@ class StoryLikes(BaseModel):
 
 # Token verification
 class Token(BaseModel):
+    username: EmailStr
+    password: str
     access_token: str
     token_type: str
 
