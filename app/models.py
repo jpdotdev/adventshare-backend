@@ -3,6 +3,7 @@ from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
 from sqlalchemy.sql.sqltypes import TIMESTAMP
 from sqlalchemy.sql.expression import text
 from sqlalchemy.orm import relationship
+from sqlalchemy.dialects.postgresql import TEXT
 
 class Story(Base):
     __tablename__ = 'stories'
@@ -10,7 +11,7 @@ class Story(Base):
     id = Column(Integer, primary_key=True, nullable=False)
     character = Column(String, nullable=False)
     party = Column(String)
-    story = Column(String, nullable=False)
+    story = Column(TEXT, nullable=False)
     published = Column(Boolean, server_default='TRUE', nullable=False)
     created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'))
     user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)

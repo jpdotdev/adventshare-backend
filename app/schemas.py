@@ -71,7 +71,3 @@ class Like(BaseModel):
     story_id: int
     direction: conint(le=1, ge=0)
     
-
-# Token
-# username: EmailStr
-# password: str
