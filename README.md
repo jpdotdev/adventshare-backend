@@ -14,5 +14,5 @@
 
 Technologies used in the project:
 
-*   Frontend: React & Tailwind
+*   Frontend: React & Tailwind - Designed by Jezreal Hope Magat
 *   Backend: FastAPI (Python) PostgreSQL +SQLAlechemy
