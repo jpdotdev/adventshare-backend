@@ -6,7 +6,7 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://snipboard.io/pFZHkQ.jpg" alt="project-screenshot" width="750" height="500/">
+<img src="https://snipboard.io/pFZHkQ.jpg" alt="project-screenshot" width="800" height="500/">
 
   
   
