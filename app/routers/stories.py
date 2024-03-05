@@ -12,7 +12,7 @@ router = APIRouter(prefix='/stories',
 
 @router.get('/', response_model=List[schemas.StoryLikes])
 def get_stories(db: Session = Depends(get_db),
-                limit: int = 5, skip: int = 0, search: Optional[str] = ""):
+                limit: int = 0, skip: int = 0, search: Optional[str] = ""):
 
     stories = db.query(models.Story, func.count(models.Like.story_id).label('likes')).join(
                 models.Like, models.Like.story_id == models.Story.id, isouter=True).group_by(models.Story.id).filter(models.Story.character.contains(search)).limit(limit).offset(skip).all()
